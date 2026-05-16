@@ -1,0 +1,176 @@
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  padding:120px 8% 80px;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.82)),
+  url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+}
+
+/* ESCURECIMENTO */
+
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+  radial-gradient(circle at top left,
+  rgba(255,212,59,0.15),
+  transparent 35%);
+}
+
+/* DEGRADÊ FINAL */
+
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+  linear-gradient(to top,#081220 2%,transparent 30%);
+}
+
+/* CONTEÚDO */
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:760px;
+}
+
+/* TAG SUPERIOR */
+
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  padding:12px 22px;
+  margin-bottom:28px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.1);
+
+  backdrop-filter:blur(10px);
+
+  color:#ffd43b !important;
+  font-size:0.95rem !important;
+  font-weight:600;
+
+  letter-spacing:.5px;
+
+  text-transform:uppercase;
+}
+
+/* TÍTULO */
+
+.hero h1{
+  font-size:5.5rem;
+  line-height:1;
+  margin-bottom:28px;
+  font-weight:800;
+
+  text-shadow:
+  0 8px 25px rgba(0,0,0,0.45);
+}
+
+/* DESTAQUE */
+
+.hero span{
+  color:#ffd43b;
+
+  display:block;
+
+  margin-top:10px;
+}
+
+/* TEXTO */
+
+.hero p{
+  font-size:1.15rem;
+  line-height:2;
+  color:#e4e4e4;
+
+  max-width:650px;
+
+  margin-bottom:45px;
+}
+
+/* BOTÃO */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:18px 42px;
+
+  border-radius:60px;
+
+  background:linear-gradient(
+    135deg,
+    #dc2626,
+    #ef4444
+  );
+
+  color:white;
+  text-decoration:none;
+
+  font-weight:700;
+  letter-spacing:.5px;
+
+  transition:.4s;
+}
+
+.btn:hover{
+
+  transform:
+  translateY(-6px)
+  scale(1.03);
+
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:950px){
+
+  .hero{
+    padding-top:140px;
+  }
+
+  .hero h1{
+    font-size:3.7rem;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero h1{
+    font-size:2.8rem;
+  }
+
+  .hero p{
+    font-size:1rem;
+    line-height:1.8;
+  }
+
+  .hero-tag{
+    font-size:.8rem !important;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+}
