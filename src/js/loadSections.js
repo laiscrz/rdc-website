@@ -20,5 +20,10 @@ export async function loadSections(){
     './src/pages/hero.html'
   );
 
+   await loadSection(
+    'about-container',
+    './src/pages/about.html'
+  );
+
 
 }
