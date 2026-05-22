@@ -26,7 +26,6 @@
     backdrop-filter: blur(14px);
 }
 
-
 .faixa-info::before {
     content: "";
     position: absolute;
@@ -43,7 +42,6 @@
             rgba(255, 255, 255, .6),
             transparent);
 }
-
 
 .info-item {
     position: relative;
@@ -72,7 +70,6 @@
     background: rgba(255, 255, 255, .08);
 }
 
-
 .info-item:hover {
     background:
         linear-gradient(180deg,
@@ -80,16 +77,14 @@
             rgba(255, 255, 255, 0));
 }
 
-
 .icon {
-    min-width: 68px;
-    height: 68px;
+    min-width: 72px;
+    width: 72px;
+    height: 72px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-size: 1.7rem;
 
     border-radius: 22px;
 
@@ -102,8 +97,9 @@
         0 10px 25px rgba(0, 127, 255, .25);
 
     position: relative;
-}
 
+    flex-shrink: 0;
+}
 
 .icon::before {
     content: "";
@@ -120,6 +116,18 @@
     z-index: -1;
 }
 
+.icon img {
+    width: 34px;
+    height: 34px;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        brightness(0)
+        invert(1);
+}
 
 .info-text {
     display: flex;
@@ -147,12 +155,10 @@
     line-height: 1.4;
 }
 
-
 #population-counter {
     color: var(--color-secondary);
     font-size: 1.5rem;
 }
-
 
 
 @media(max-width:950px) {
@@ -182,17 +188,28 @@
 
     .info-item {
         padding: 24px;
+        gap: 16px;
     }
 
     .icon {
         min-width: 58px;
+        width: 58px;
         height: 58px;
 
-        font-size: 1.4rem;
+        border-radius: 18px;
+    }
+
+    .icon img {
+        width: 26px;
+        height: 26px;
     }
 
     .info-text h3 {
         font-size: 1rem;
+    }
+
+    #population-counter {
+        font-size: 1.2rem;
     }
 
 }
@@ -206,13 +223,12 @@
     padding: 110px 8%;
 }
 
-
 .about-title {
     margin-bottom: 70px;
 }
 
 .about-title h2 {
-    font-size: clamp(3rem, 6vw, 2rem);
+    font-size: clamp(3rem, 6vw, 4.5rem);
 
     color: var(--color-text);
 
@@ -241,97 +257,90 @@
     background: var(--color-accent);
 }
 
-
-.about-content{
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    gap:80px;
-    align-items:center;
+.about-content {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 80px;
+    align-items: center;
 }
 
-
-.about-image{
-    position:relative;
-    width:100%;
+.about-image {
+    position: relative;
+    width: 100%;
 }
 
-.about-image::before{
-    content:"";
-    position:absolute;
+.about-image::before {
+    content: "";
+    position: absolute;
 
-    inset:-20px;
+    inset: -20px;
 
-    border:2px solid var(--color-secondary);
-    border-radius:var(--radius-lg);
+    border: 2px solid var(--color-secondary);
+    border-radius: var(--radius-lg);
 
-    z-index:0;
+    z-index: 0;
 
-    opacity:.7;
+    opacity: .7;
 }
 
+.about-image img {
+    position: relative;
+    z-index: 2;
 
-.about-image img{
-    position:relative;
-    z-index:2;
+    width: 100%;
+    display: block;
 
-    width:100%;
-    display:block;
+    height: auto;
 
-    height:auto;
-
-    border-radius:var(--radius-lg);
+    border-radius: var(--radius-lg);
 
     box-shadow:
-        0 30px 70px rgba(0,0,0,.45);
+        0 30px 70px rgba(0, 0, 0, .45);
 
-    transition:var(--transition);
+    transition: var(--transition);
 }
 
-.about-image img:hover{
+.about-image img:hover {
     transform:
         translateY(-8px)
         scale(1.01);
 }
 
+.about-text {
+    color: var(--color-muted);
 
-
-.about-text{
-    color:var(--color-muted);
-
-    max-width:480px;
+    max-width: 480px;
 }
 
-.about-text p{
-    font-size:1.08rem;
-    line-height:2;
+.about-text p {
+    font-size: 1.08rem;
+    line-height: 2;
 
-    margin-bottom:28px;
+    margin-bottom: 28px;
 }
 
+@media(max-width:950px) {
 
-
-@media(max-width:950px){
-
-    .about-content{
-        grid-template-columns:1fr;
-        gap:55px;
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 55px;
     }
 
-    .about-text{
-        max-width:100%;
+    .about-text {
+        max-width: 100%;
     }
 
 }
 
-@media(max-width:600px){
+@media(max-width:600px) {
 
-    .about-image::before{
-        inset:-12px;
+    .about-image::before {
+        inset: -12px;
     }
 
-    .about-text p{
-        font-size:1rem;
-        line-height:1.9;
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.9;
     }
 
 }
