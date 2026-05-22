@@ -1,10 +1,10 @@
-async function loadSection(id, path){
+async function loadSection(id, path) {
 
   const response =
-  await fetch(path);
+    await fetch(path);
 
   const html =
-  await response.text();
+    await response.text();
 
   document
     .getElementById(id)
@@ -13,16 +13,21 @@ async function loadSection(id, path){
 }
 
 
-export async function loadSections(){
+export async function loadSections() {
 
   await loadSection(
     'hero-container',
     './src/pages/hero.html'
   );
 
-   await loadSection(
+  await loadSection(
     'about-container',
     './src/pages/about.html'
+  );
+
+   await loadSection(
+    'culture-container',
+    './src/pages/culture.html'
   );
 
 
