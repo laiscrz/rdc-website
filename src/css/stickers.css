@@ -1,4 +1,4 @@
-.stickers{
+.stickers {
 
     position: relative;
 
@@ -7,12 +7,12 @@
     overflow: hidden;
 
     background:
-    radial-gradient(circle at top, rgba(0,127,255,.12), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(255,209,0,.05), transparent 30%),
-    #081120;
+        radial-gradient(circle at top, rgba(0, 127, 255, .12), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(255, 209, 0, .05), transparent 30%),
+        #081120;
 }
 
-.stickers::before{
+.stickers::before {
 
     content: "";
 
@@ -26,12 +26,12 @@
 
     border-radius: 50%;
 
-    background: rgba(255,209,0,.04);
+    background: rgba(255, 209, 0, .04);
 
     filter: blur(90px);
 }
 
-.stickers::after{
+.stickers::after {
 
     content: "";
 
@@ -45,12 +45,12 @@
 
     border-radius: 50%;
 
-    background: rgba(0,127,255,.05);
+    background: rgba(0, 127, 255, .05);
 
     filter: blur(100px);
 }
 
-.stickers-header{
+.stickers-header {
 
     position: relative;
     z-index: 5;
@@ -60,7 +60,7 @@
     margin-bottom: 70px;
 }
 
-.section-tag{
+.section-tag {
 
     display: inline-flex;
 
@@ -72,13 +72,11 @@
     border-radius: 999px;
 
     background:
-    linear-gradient(
-        90deg,
-        rgba(255,209,0,.10),
-        rgba(255,255,255,.03)
-    );
+        linear-gradient(90deg,
+            rgba(255, 209, 0, .10),
+            rgba(255, 255, 255, .03));
 
-    border: 1px solid rgba(255,209,0,.18);
+    border: 1px solid rgba(255, 209, 0, .18);
 
     color: #FFD100;
 
@@ -95,7 +93,7 @@
     backdrop-filter: blur(10px);
 }
 
-.section-tag::before{
+.section-tag::before {
 
     content: "";
 
@@ -107,7 +105,7 @@
     background: #FFD100;
 }
 
-.stickers-header h2{
+.stickers-header h2 {
 
     font-size: clamp(1.1rem, 4.5vw, 3.2rem);
 
@@ -124,21 +122,19 @@
     margin-bottom: 22px;
 }
 
-.stickers-header h2 span{
+.stickers-header h2 span {
 
     background:
-    linear-gradient(
-        90deg,
-        #ffffff 0%,
-        #FFD100 40%,
-        #007FFF 100%
-    );
+        linear-gradient(90deg,
+            #ffffff 0%,
+            #FFD100 40%,
+            #007FFF 100%);
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.stickers-header h2::after{
+.stickers-header h2::after {
 
     content: "";
 
@@ -152,15 +148,13 @@
     border-radius: 999px;
 
     background:
-    linear-gradient(
-        90deg,
-        #007FFF,
-        #FFD100,
-        #CE1126
-    );
+        linear-gradient(90deg,
+            #007FFF,
+            #FFD100,
+            #CE1126);
 }
 
-.stickers-header p{
+.stickers-header p {
 
     width: min(620px, 92%);
 
@@ -173,7 +167,7 @@
     font-size: .95rem;
 }
 
-.stickers-grid{
+.stickers-grid {
 
     position: relative;
 
@@ -188,7 +182,7 @@
     gap: 60px;
 }
 
-.top-row{
+.top-row {
 
     display: grid;
 
@@ -204,7 +198,7 @@
 }
 
 
-.bottom-row{
+.bottom-row {
 
     display: flex;
 
@@ -215,45 +209,45 @@
     overflow: visible;
 }
 
-.bottom-row .sticker.landscape{
+.bottom-row .sticker.landscape {
 
     width: 520px;
 
     height: 300px;
 }
 
-.bottom-row .sticker.landscape .sticker-overlay h3{
+.bottom-row .sticker.landscape .sticker-overlay h3 {
 
     font-size: 2rem;
 }
 
-.bottom-row .sticker.landscape .mini-card{
+.bottom-row .sticker.landscape .mini-card {
 
     height: 120px;
 }
 
 .bottom-row .sticker.landscape .sticker-front,
-.bottom-row .sticker.landscape .sticker-back{
+.bottom-row .sticker.landscape .sticker-back {
 
     box-shadow:
-    0 0 35px rgba(255,209,0,.18),
-    0 15px 45px rgba(0,0,0,.45);
+        0 0 35px rgba(255, 209, 0, .18),
+        0 15px 45px rgba(0, 0, 0, .45);
 }
 
 
-.stickers-row::-webkit-scrollbar{
+.stickers-row::-webkit-scrollbar {
 
     height: 8px;
 }
 
-.stickers-row::-webkit-scrollbar-thumb{
+.stickers-row::-webkit-scrollbar-thumb {
 
-    background: rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, .15);
 
     border-radius: 999px;
 }
 
-.sticker{
+.sticker {
 
     width: 235px;
     height: 440px;
@@ -263,7 +257,7 @@
     flex-shrink: 0;
 }
 
-.sticker-inner{
+.sticker-inner {
 
     width: 100%;
     height: 100%;
@@ -273,16 +267,16 @@
     transform-style: preserve-3d;
 
     transition:
-    transform .85s cubic-bezier(.4,.2,.2,1);
+        transform .85s cubic-bezier(.4, .2, .2, 1);
 }
 
-.sticker:hover .sticker-inner{
+.sticker:hover .sticker-inner {
 
     transform: rotateY(180deg);
 }
 
 .sticker-front,
-.sticker-back{
+.sticker-back {
 
     position: absolute;
 
@@ -294,16 +288,16 @@
 
     backface-visibility: hidden;
 
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, .08);
 
     background: #101B2D;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,.35);
+        0 10px 30px rgba(0, 0, 0, .35);
 }
 
 .sticker-front::after,
-.sticker-back::after{
+.sticker-back::after {
 
     content: "";
 
@@ -311,7 +305,7 @@
 
     inset: 6px;
 
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, .08);
 
     border-radius: 9px;
 
@@ -320,18 +314,18 @@
     z-index: 10;
 }
 
-.sticker-front{
+.sticker-front {
 
     transition: .35s ease;
 }
 
-.sticker:hover .sticker-front{
+.sticker:hover .sticker-front {
 
     transform: scale(1.015);
 }
 
 
-.sticker-front img{
+.sticker-front img {
 
     width: 100%;
     height: 100%;
@@ -343,13 +337,13 @@
     transition: .5s ease;
 }
 
-.sticker:hover .sticker-front img{
+.sticker:hover .sticker-front img {
 
     transform: scale(1.03);
 }
 
 
-.sticker-overlay{
+.sticker-overlay {
 
     position: absolute;
 
@@ -364,16 +358,14 @@
     padding: 24px;
 
     background:
-    linear-gradient(
-        to top,
-        rgba(0,0,0,.68),
-        rgba(0,0,0,.02)
-    );
+        linear-gradient(to top,
+            rgba(0, 0, 0, .68),
+            rgba(0, 0, 0, .02));
 
     z-index: 2;
 }
 
-.sticker-overlay span{
+.sticker-overlay span {
 
     color: #FFD100;
 
@@ -384,7 +376,7 @@
     letter-spacing: 1px;
 }
 
-.sticker-overlay h3{
+.sticker-overlay h3 {
 
     color: white;
 
@@ -395,7 +387,7 @@
     font-weight: 800;
 }
 
-.sticker-back{
+.sticker-back {
 
     transform: rotateY(180deg);
 
@@ -408,14 +400,12 @@
     justify-content: flex-start;
 
     background:
-    linear-gradient(
-        180deg,
-        #15233a,
-        #081120
-    );
+        linear-gradient(180deg,
+            #15233a,
+            #081120);
 }
 
-.mini-card{
+.mini-card {
 
     width: 100%;
     height: 170px;
@@ -424,12 +414,12 @@
 
     overflow: hidden;
 
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, .08);
 
     margin-bottom: 22px;
 }
 
-.mini-card img{
+.mini-card img {
 
     width: 100%;
     height: 100%;
@@ -437,7 +427,7 @@
     object-fit: cover;
 }
 
-.back-category{
+.back-category {
 
     color: #FFD100;
 
@@ -450,7 +440,7 @@
     letter-spacing: 1.5px;
 }
 
-.back-content h3{
+.back-content h3 {
 
     color: white;
 
@@ -461,7 +451,7 @@
     line-height: 1.2;
 }
 
-.back-content p{
+.back-content p {
 
     color: #9CA3AF;
 
@@ -472,24 +462,24 @@
 
 
 .sticker.rare .sticker-front,
-.sticker.rare .sticker-back{
+.sticker.rare .sticker-back {
 
-    border: 1px solid rgba(255,209,0,.22);
+    border: 1px solid rgba(255, 209, 0, .22);
 }
 
 .sticker.legendary .sticker-front,
-.sticker.legendary .sticker-back{
+.sticker.legendary .sticker-back {
 
-    border: 1px solid rgba(255,209,0,.45);
+    border: 1px solid rgba(255, 209, 0, .45);
 
     box-shadow:
-    0 0 18px rgba(255,209,0,.10),
-    0 10px 30px rgba(0,0,0,.4);
+        0 0 18px rgba(255, 209, 0, .10),
+        0 10px 30px rgba(0, 0, 0, .4);
 }
 
 
 .sticker.legendary .sticker-front::before,
-.sticker.legendary .sticker-back::before{
+.sticker.legendary .sticker-back::before {
 
     content: "";
 
@@ -498,12 +488,10 @@
     inset: 0;
 
     background:
-    linear-gradient(
-        115deg,
-        transparent 0%,
-        rgba(255,255,255,.08) 48%,
-        transparent 52%
-    );
+        linear-gradient(115deg,
+            transparent 0%,
+            rgba(255, 255, 255, .08) 48%,
+            transparent 52%);
 
     animation: shine 5s linear infinite;
 
@@ -513,7 +501,7 @@
 }
 
 
-.legendary-badge{
+.legendary-badge {
 
     position: absolute;
 
@@ -527,11 +515,9 @@
     border-radius: 999px;
 
     background:
-    linear-gradient(
-        90deg,
-        #FFD100,
-        #FFF3B0
-    );
+        linear-gradient(90deg,
+            #FFD100,
+            #FFF3B0);
 
     color: #000;
 
@@ -542,90 +528,164 @@
     letter-spacing: 1.4px;
 
     box-shadow:
-    0 0 14px rgba(255,209,0,.18);
+        0 0 14px rgba(255, 209, 0, .18);
 }
 
 
 
-.sticker.landscape{
+.sticker.landscape {
 
     width: 420px;
     height: 260px;
 }
 
-.sticker.landscape .mini-card{
+.sticker.landscape .mini-card {
 
     height: 100px;
 }
 
-.sticker.landscape .sticker-overlay h3{
+.sticker.landscape .sticker-overlay h3 {
 
     font-size: 2rem;
 }
 
 .sticker.landscape .sticker-front img,
-.sticker.landscape .mini-card img{
+.sticker.landscape .mini-card img {
 
     object-position: center;
 }
 
 
-@keyframes shine{
+@keyframes shine {
 
-    from{
+    from {
         transform: translateX(-100%) rotate(18deg);
     }
 
-    to{
+    to {
         transform: translateX(100%) rotate(18deg);
     }
 }
 
 
+@media (max-width: 1100px) {
 
-@media(max-width: 768px){
+    .top-row {
 
-    .stickers{
+        grid-template-columns: repeat(2, 235px);
 
-        padding: 100px 5%;
+        gap: 20px;
     }
 
-    .stickers-header h2{
+    .bottom-row .sticker.landscape {
 
-        font-size: 2.3rem;
+        width: 420px;
+        height: 260px;
     }
 
-    .sticker{
-
-        width: 220px;
-        height: 420px;
-    }
-
-    .sticker.landscape{
-
-        width: 340px;
-        height: 220px;
-    }
-
-    .sticker.landscape .sticker-overlay h3{
-
-        font-size: 1.5rem;
-    }
 }
 
 
+@media (max-width: 768px) {
 
-@media(max-width: 1100px){
+    .stickers {
 
-    .top-row{
-
-        grid-template-columns: repeat(2, 235px);
+        padding: 90px 5%;
     }
 
-    .bottom-row .sticker.landscape{
+    .stickers-header {
 
-        width: 420px;
-
-        height: 260px;
+        margin-bottom: 50px;
     }
+
+    .stickers-header h2 {
+
+        font-size: 2rem;
+
+        line-height: 1.1;
+    }
+
+    .stickers-header p {
+
+        font-size: .9rem;
+    }
+
+    .stickers-grid {
+
+        gap: 40px;
+    }
+
+    .top-row {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+    }
+
+    .sticker {
+
+        width: 240px;
+        height: 450px;
+    }
+
+    .bottom-row {
+
+        width: 100%;
+    }
+
+    .bottom-row .sticker.landscape {
+
+        width: 100%;
+        max-width: 380px;
+
+        height: auto;
+
+        aspect-ratio: 420 / 260;
+    }
+
+    .bottom-row .sticker.landscape .sticker-overlay h3 {
+
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .stickers {
+
+        padding: 70px 4%;
+    }
+
+    .sticker {
+
+        width: 220px;
+        height: 410px;
+    }
+
+    .bottom-row .sticker.landscape {
+
+        max-width: 320px;
+    }
+
+    .sticker-overlay {
+
+        padding: 18px;
+    }
+
+    .sticker-overlay h3 {
+
+        font-size: 1.2rem;
+    }
+
+    .back-content p {
+
+        font-size: .85rem;
+    }
+
 }
