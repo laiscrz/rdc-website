@@ -25,10 +25,14 @@ export async function loadSections() {
     './src/pages/about.html'
   );
 
-   await loadSection(
+  await loadSection(
     'culture-container',
     './src/pages/culture.html'
   );
 
+  await loadSection(
+    'stickers-container',
+    './src/pages/stickers.html'
+  );
 
 }

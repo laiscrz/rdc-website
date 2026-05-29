@@ -1,0 +1,631 @@
+.stickers{
+
+    position: relative;
+
+    padding: 140px 4%;
+
+    overflow: hidden;
+
+    background:
+    radial-gradient(circle at top, rgba(0,127,255,.12), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(255,209,0,.05), transparent 30%),
+    #081120;
+}
+
+.stickers::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    left: -120px;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(255,209,0,.04);
+
+    filter: blur(90px);
+}
+
+.stickers::after{
+
+    content: "";
+
+    position: absolute;
+
+    right: -120px;
+    bottom: -120px;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background: rgba(0,127,255,.05);
+
+    filter: blur(100px);
+}
+
+.stickers-header{
+
+    position: relative;
+    z-index: 5;
+
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.section-tag{
+
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 18px;
+
+    border-radius: 999px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(255,209,0,.10),
+        rgba(255,255,255,.03)
+    );
+
+    border: 1px solid rgba(255,209,0,.18);
+
+    color: #FFD100;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(10px);
+}
+
+.section-tag::before{
+
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #FFD100;
+}
+
+.stickers-header h2{
+
+    font-size: clamp(1.1rem, 4.5vw, 3.2rem);
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    color: white;
+
+    text-transform: uppercase;
+
+    margin-bottom: 22px;
+}
+
+.stickers-header h2 span{
+
+    background:
+    linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #FFD100 40%,
+        #007FFF 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stickers-header h2::after{
+
+    content: "";
+
+    display: block;
+
+    width: 90px;
+    height: 4px;
+
+    margin: 22px auto 0;
+
+    border-radius: 999px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #007FFF,
+        #FFD100,
+        #CE1126
+    );
+}
+
+.stickers-header p{
+
+    width: min(620px, 92%);
+
+    margin: auto;
+
+    color: #9CA3AF;
+
+    line-height: 1.7;
+
+    font-size: .95rem;
+}
+
+.stickers-grid{
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.top-row{
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 235px);
+
+    justify-content: center;
+
+    gap: 22px;
+
+    width: 100%;
+
+    overflow: visible;
+}
+
+
+.bottom-row{
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    overflow: visible;
+}
+
+.bottom-row .sticker.landscape{
+
+    width: 520px;
+
+    height: 300px;
+}
+
+.bottom-row .sticker.landscape .sticker-overlay h3{
+
+    font-size: 2rem;
+}
+
+.bottom-row .sticker.landscape .mini-card{
+
+    height: 120px;
+}
+
+.bottom-row .sticker.landscape .sticker-front,
+.bottom-row .sticker.landscape .sticker-back{
+
+    box-shadow:
+    0 0 35px rgba(255,209,0,.18),
+    0 15px 45px rgba(0,0,0,.45);
+}
+
+
+.stickers-row::-webkit-scrollbar{
+
+    height: 8px;
+}
+
+.stickers-row::-webkit-scrollbar-thumb{
+
+    background: rgba(255,255,255,.15);
+
+    border-radius: 999px;
+}
+
+.sticker{
+
+    width: 235px;
+    height: 440px;
+
+    perspective: 1500px;
+
+    flex-shrink: 0;
+}
+
+.sticker-inner{
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition:
+    transform .85s cubic-bezier(.4,.2,.2,1);
+}
+
+.sticker:hover .sticker-inner{
+
+    transform: rotateY(180deg);
+}
+
+.sticker-front,
+.sticker-back{
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    backface-visibility: hidden;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: #101B2D;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+}
+
+.sticker-front::after,
+.sticker-back::after{
+
+    content: "";
+
+    position: absolute;
+
+    inset: 6px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 9px;
+
+    pointer-events: none;
+
+    z-index: 10;
+}
+
+.sticker-front{
+
+    transition: .35s ease;
+}
+
+.sticker:hover .sticker-front{
+
+    transform: scale(1.015);
+}
+
+
+.sticker-front img{
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    transition: .5s ease;
+}
+
+.sticker:hover .sticker-front img{
+
+    transform: scale(1.03);
+}
+
+
+.sticker-overlay{
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 24px;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.68),
+        rgba(0,0,0,.02)
+    );
+
+    z-index: 2;
+}
+
+.sticker-overlay span{
+
+    color: #FFD100;
+
+    font-size: .82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.sticker-overlay h3{
+
+    color: white;
+
+    font-size: 1.45rem;
+
+    margin-top: 10px;
+
+    font-weight: 800;
+}
+
+.sticker-back{
+
+    transform: rotateY(180deg);
+
+    padding: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    background:
+    linear-gradient(
+        180deg,
+        #15233a,
+        #081120
+    );
+}
+
+.mini-card{
+
+    width: 100%;
+    height: 170px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    margin-bottom: 22px;
+}
+
+.mini-card img{
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.back-category{
+
+    color: #FFD100;
+
+    text-transform: uppercase;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.back-content h3{
+
+    color: white;
+
+    font-size: 1.3rem;
+
+    margin: 12px 0 16px;
+
+    line-height: 1.2;
+}
+
+.back-content p{
+
+    color: #9CA3AF;
+
+    font-size: .92rem;
+
+    line-height: 1.75;
+}
+
+
+.sticker.rare .sticker-front,
+.sticker.rare .sticker-back{
+
+    border: 1px solid rgba(255,209,0,.22);
+}
+
+.sticker.legendary .sticker-front,
+.sticker.legendary .sticker-back{
+
+    border: 1px solid rgba(255,209,0,.45);
+
+    box-shadow:
+    0 0 18px rgba(255,209,0,.10),
+    0 10px 30px rgba(0,0,0,.4);
+}
+
+
+.sticker.legendary .sticker-front::before,
+.sticker.legendary .sticker-back::before{
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+        115deg,
+        transparent 0%,
+        rgba(255,255,255,.08) 48%,
+        transparent 52%
+    );
+
+    animation: shine 5s linear infinite;
+
+    opacity: .45;
+
+    z-index: 3;
+}
+
+
+.legendary-badge{
+
+    position: absolute;
+
+    top: 16px;
+    left: 16px;
+
+    z-index: 20;
+
+    padding: 9px 14px;
+
+    border-radius: 999px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #FFD100,
+        #FFF3B0
+    );
+
+    color: #000;
+
+    font-size: .68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+
+    box-shadow:
+    0 0 14px rgba(255,209,0,.18);
+}
+
+
+
+.sticker.landscape{
+
+    width: 420px;
+    height: 260px;
+}
+
+.sticker.landscape .mini-card{
+
+    height: 100px;
+}
+
+.sticker.landscape .sticker-overlay h3{
+
+    font-size: 2rem;
+}
+
+.sticker.landscape .sticker-front img,
+.sticker.landscape .mini-card img{
+
+    object-position: center;
+}
+
+
+@keyframes shine{
+
+    from{
+        transform: translateX(-100%) rotate(18deg);
+    }
+
+    to{
+        transform: translateX(100%) rotate(18deg);
+    }
+}
+
+
+
+@media(max-width: 768px){
+
+    .stickers{
+
+        padding: 100px 5%;
+    }
+
+    .stickers-header h2{
+
+        font-size: 2.3rem;
+    }
+
+    .sticker{
+
+        width: 220px;
+        height: 420px;
+    }
+
+    .sticker.landscape{
+
+        width: 340px;
+        height: 220px;
+    }
+
+    .sticker.landscape .sticker-overlay h3{
+
+        font-size: 1.5rem;
+    }
+}
+
+
+
+@media(max-width: 1100px){
+
+    .top-row{
+
+        grid-template-columns: repeat(2, 235px);
+    }
+
+    .bottom-row .sticker.landscape{
+
+        width: 420px;
+
+        height: 260px;
+    }
+}
