@@ -568,16 +568,16 @@
 }
 
 
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
 
-    .top-row{
+    .top-row {
 
         grid-template-columns: repeat(2, 235px);
 
         gap: 20px;
     }
 
-    .bottom-row .sticker.landscape{
+    .bottom-row .sticker.landscape {
 
         width: 420px;
         height: 260px;
@@ -586,36 +586,36 @@
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-    .stickers{
+    .stickers {
 
         padding: 90px 5%;
     }
 
-    .stickers-header{
+    .stickers-header {
 
         margin-bottom: 50px;
     }
 
-    .stickers-header h2{
+    .stickers-header h2 {
 
         font-size: 2rem;
 
         line-height: 1.1;
     }
 
-    .stickers-header p{
+    .stickers-header p {
 
         font-size: .9rem;
     }
 
-    .stickers-grid{
+    .stickers-grid {
 
         gap: 40px;
     }
 
-    .top-row{
+    .top-row {
 
         display: flex;
 
@@ -626,18 +626,18 @@
         gap: 25px;
     }
 
-    .sticker{
+    .sticker {
 
         width: 240px;
         height: 450px;
     }
 
-    .bottom-row{
+    .bottom-row {
 
         width: 100%;
     }
 
-    .bottom-row .sticker.landscape{
+    .bottom-row .sticker.landscape {
 
         width: 100%;
         max-width: 380px;
@@ -647,7 +647,7 @@
         aspect-ratio: 420 / 260;
     }
 
-    .bottom-row .sticker.landscape .sticker-overlay h3{
+    .bottom-row .sticker.landscape .sticker-overlay h3 {
 
         font-size: 1.5rem;
     }
@@ -655,35 +655,35 @@
 }
 
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
 
-    .stickers{
+    .stickers {
 
         padding: 70px 4%;
     }
 
-    .sticker{
+    .sticker {
 
         width: 220px;
         height: 410px;
     }
 
-    .bottom-row .sticker.landscape{
+    .bottom-row .sticker.landscape {
 
         max-width: 320px;
     }
 
-    .sticker-overlay{
+    .sticker-overlay {
 
         padding: 18px;
     }
 
-    .sticker-overlay h3{
+    .sticker-overlay h3 {
 
         font-size: 1.2rem;
     }
 
-    .back-content p{
+    .back-content p {
 
         font-size: .85rem;
     }
