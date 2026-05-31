@@ -1,0 +1,467 @@
+.team {
+    position: relative;
+
+    padding: 140px 4%;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at top,
+            rgba(0, 127, 255, .12),
+            transparent 35%),
+
+        radial-gradient(circle at bottom right,
+            rgba(255, 209, 0, .05),
+            transparent 30%),
+
+        var(--color-bg);
+}
+
+.team::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    left: -120px;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 209, 0, .04);
+
+    filter: blur(90px);
+}
+
+.team::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -120px;
+    bottom: -120px;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 127, 255, .05);
+
+    filter: blur(100px);
+}
+
+
+.team-wrapper {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.team-content h2 {
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: .95;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    margin: 20px 0;
+
+    color: white;
+}
+
+.team-content h2 span {
+
+    background:
+        linear-gradient(90deg,
+            #ffffff,
+            var(--color-secondary),
+            var(--color-primary));
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.team-content p {
+
+    color: var(--color-muted);
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+
+    margin-bottom: 35px;
+}
+
+
+.team-stats {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.stat {
+
+    min-width: 120px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    background: rgba(255, 255, 255, .03);
+
+    backdrop-filter: blur(10px);
+}
+
+.stat strong {
+
+    display: block;
+
+    color: var(--color-secondary);
+
+    font-size: 2rem;
+
+    font-weight: 900;
+
+    margin-bottom: 6px;
+}
+
+.stat span {
+
+    color: var(--color-muted);
+
+    font-size: .85rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.album-showcase {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.album-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    border-radius: 26px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transform: rotate(-4deg);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, .45);
+
+    transition: .4s ease;
+}
+
+.album-frame:hover {
+
+    transform:
+        rotate(0deg) scale(1.03);
+
+    box-shadow:
+        0 35px 70px rgba(0, 0, 0, .55);
+}
+
+.album-frame img {
+
+    width: 100%;
+
+    display: block;
+}
+
+
+
+.album-hover {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(0, 0, 0, .55);
+
+    opacity: 0;
+
+    transition: .3s ease;
+}
+
+.album-frame:hover .album-hover {
+
+    opacity: 1;
+}
+
+.album-hover span {
+
+    color: white;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    padding: 14px 22px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.album-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(3, 8, 18, .92);
+
+    backdrop-filter: blur(14px);
+
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .35s ease;
+}
+
+.album-modal.active {
+
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* GLOW RDC */
+
+.album-modal::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(255, 209, 0, .18),
+            transparent 70%);
+
+    filter: blur(80px);
+
+    z-index: -1;
+}
+
+.album-modal::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(0, 127, 255, .18),
+            transparent 70%);
+
+    filter: blur(90px);
+
+    z-index: -1;
+}
+
+
+/* IMAGEM */
+
+.album-modal img {
+
+    width: auto;
+
+    max-width: 60vw;
+
+    max-height: 80vh;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 35px 80px rgba(0, 0, 0, .65);
+
+    animation: albumAppear .35s ease;
+}
+
+
+/* FECHAR */
+
+.close-modal {
+
+    position: fixed;
+
+    top: 30px;
+    right: 30px;
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(12px);
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.close-modal:hover {
+
+    transform: rotate(90deg);
+
+    background: rgba(255, 209, 0, .18);
+
+    color: var(--color-secondary);
+}
+
+
+/* ANIMAÇÃO */
+
+@keyframes albumAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.85) translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1) translateY(0);
+    }
+}
+
+
+@media(max-width:768px) {
+
+    .album-modal img {
+
+        max-width: 90vw;
+
+        max-height: 75vh;
+    }
+
+    .close-modal {
+
+        top: 15px;
+        right: 15px;
+    }
+}
+
+
+@media(max-width: 900px) {
+
+    .team {
+
+        padding: 100px 5%;
+    }
+
+    .team-wrapper {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .team-stats {
+
+        justify-content: center;
+    }
+
+    .album-frame {
+
+        transform: none;
+
+        max-width: 500px;
+    }
+
+    .album-frame:hover {
+
+        transform: scale(1.02);
+    }
+}
