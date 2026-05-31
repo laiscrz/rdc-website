@@ -35,4 +35,14 @@ export async function loadSections() {
     './src/pages/stickers.html'
   );
 
+  await loadSection(
+    'interview-container',
+    './src/pages/interview.html'
+  );
+
+    await loadSection(
+    'team-container',
+    './src/pages/team.html'
+  );
+
 }

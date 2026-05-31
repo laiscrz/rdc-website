@@ -1,7 +1,14 @@
-import { initNavbar }from './navbar.js';
+import { initNavbar } from './navbar.js';
 import { loadSections } from './loadSections.js';
-import './cultureCarousel.js';
+import { initAlbumModal } from './albumModal.js';
 
+async function init(){
 
-loadSections();
-initNavbar();
+    await loadSections();
+
+    initNavbar();
+
+    initAlbumModal();
+}
+
+init();
