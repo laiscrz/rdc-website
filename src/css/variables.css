@@ -1,4 +1,4 @@
-:root{
+:root {
 
   --color-bg: #081120;
 
@@ -14,11 +14,11 @@
 
   --color-muted: #A9B4C7;
 
-  --border-color: rgba(255,255,255,.08);
+  --border-color: rgba(255, 255, 255, .08);
 
-  --shadow-lg: 0 10px 30px rgba(0,0,0,.35);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, .35);
 
-  --glow: 0 0 20px rgba(255,209,0,.25);
+  --glow: 0 0 20px rgba(255, 209, 0, .25);
 
   --radius-sm: 12px;
 
