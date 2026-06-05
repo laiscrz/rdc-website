@@ -1,7 +1,7 @@
 import { initNavbar } from './navbar.js';
 import { loadSections } from './loadSections.js';
 import { initAlbumModal } from './albumModal.js';
-import { initInterviewModal } from './interviewModal.js';
+import { initInterviewModal } from './interviewsModal.js';
 
 import './cultureCarousel.js';
 
