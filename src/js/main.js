@@ -1,6 +1,8 @@
 import { initNavbar } from './navbar.js';
 import { loadSections } from './loadSections.js';
 import { initAlbumModal } from './albumModal.js';
+import { initInterviewModal } from './interviewModal.js';
+
 import './cultureCarousel.js';
 
 async function init(){
@@ -10,6 +12,8 @@ async function init(){
     initNavbar();
 
     initAlbumModal();
+
+    initInterviewModal();
 }
 
 init();
