@@ -1,10 +1,10 @@
 export function initAboutTabs() {
 
     const buttons =
-        document.querySelectorAll(".tab-button");
+        document.querySelectorAll(".timeline-btn");
 
     const contents =
-        document.querySelectorAll(".tab-content");
+        document.querySelectorAll(".history-tab");
 
     if (
         !buttons.length ||
@@ -37,6 +37,7 @@ export function initAboutTabs() {
             target.classList.add("active");
 
         }
+
     }
 
     buttons.forEach(button => {
@@ -57,7 +58,7 @@ export function initAboutTabs() {
 
     const firstButton =
         document.querySelector(
-            ".tab-button.active"
+            ".timeline-btn.active"
         ) || buttons[0];
 
     if (firstButton) {
